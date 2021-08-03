@@ -1,32 +1,31 @@
-import React from "react";
+import React from 'react';
 import {
   BrowserRouter as Router,
-  Switch,
   Route,
+  Switch,
   Link,
   useRouteMatch,
   useParams,
-} from "react-router-dom";
+} from 'react-router-dom';
+import PrivateRoute from './routes/PrivateRoute';
+import PublicRoute from './routes/PublicRoute';
 
-import DashboardLayout from "./layouts/DashboardLayout";
-import HomePage from "./pages/HomePage";
-import LeavesPage from "./pages/LeavesPage";
+import HomePage from './pages/HomePage';
+import LeavesPage from './pages/LeavesPage';
 
 export default function App() {
   return (
     <Router>
       <div>
         <Switch>
-          <Route path="/about">
+          <PublicRoute exact path='/about'>
             <About />
-          </Route>
-          <Route path="/topics">
+          </PublicRoute>
+          <PublicRoute exact path='/topics'>
             <Topics />
-          </Route>
-          <Route path="/" element={<DashboardLayout />}>
-            <Route path="/" element={<HomePage />} />
-            <Route path="/leaves" element={<LeavesPage />} />
-          </Route>
+          </PublicRoute>
+          <PrivateRoute exact path='/' element={<HomePage />} />
+          <PrivateRoute exact path='/leaves' element={<LeavesPage />} />
         </Switch>
       </div>
     </Router>
@@ -58,7 +57,7 @@ function Topics() {
           2nd <Route> here as an "index" page for all topics, or
           the page that is shown when no topic is selected */}
       <Switch>
-        <Route path={`${match.path}/:topicId`}>
+        <Route path={`${match.path}/topics/:topicId`}>
           <Topic />
         </Route>
         <Route path={match.path}>
