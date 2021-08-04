@@ -3,7 +3,7 @@ import { Route } from 'react-router-dom';
 import PublicLayout from '../layouts/PublicLayout';
 
 // eslint-disable-next-line import/no-anonymous-default-export
-export default ({ component: Component, ...rest }) => {
+const PublicRoute = ({ component: Component, ...rest }) => {
   return (
     <Route
       {...rest}
@@ -15,3 +15,5 @@ export default ({ component: Component, ...rest }) => {
     />
   );
 };
+
+export default PublicRoute;

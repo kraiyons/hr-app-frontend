@@ -21,11 +21,15 @@ export default function App() {
           <PublicRoute exact path='/about'>
             <About />
           </PublicRoute>
-          <PublicRoute exact path='/topics'>
+          <PublicRoute path='/topics'>
             <Topics />
           </PublicRoute>
-          <PrivateRoute exact path='/' element={<HomePage />} />
-          <PrivateRoute exact path='/leaves' element={<LeavesPage />} />
+          <PrivateRoute exact path='/'>
+            <HomePage />
+          </PrivateRoute>
+          <PrivateRoute exact path='/leaves'>
+            <LeavesPage />
+          </PrivateRoute>
         </Switch>
       </div>
     </Router>
@@ -39,16 +43,19 @@ function About() {
 function Topics() {
   let match = useRouteMatch();
 
+  React.useEffect(() => {
+    console.log({ match });
+  }, [match]);
   return (
     <div>
       <h2>Topics</h2>
 
       <ul>
         <li>
-          <Link to={`${match.url}/components`}>Components</Link>
+          <Link to={`${match.path}/components`}>Components</Link>
         </li>
         <li>
-          <Link to={`${match.url}/props-v-state`}>Props v. State</Link>
+          <Link to={`${match.path}/props-v-state`}>Props v. State</Link>
         </li>
       </ul>
 
@@ -60,7 +67,7 @@ function Topics() {
         <Route path={`${match.path}/topics/:topicId`}>
           <Topic />
         </Route>
-        <Route path={match.path}>
+        <Route exact path={match.path}>
           <h3>Please select a topic.</h3>
         </Route>
       </Switch>

@@ -2,8 +2,7 @@ import React from 'react';
 import { Route } from 'react-router-dom';
 import PrivateLayout from '../layouts/PrivateLayout';
 
-// eslint-disable-next-line import/no-anonymous-default-export
-export default ({ component: Component, ...rest }) => {
+const PrivateRoute = ({ component: Component, ...rest }) => {
   return (
     <Route
       {...rest}
@@ -15,3 +14,5 @@ export default ({ component: Component, ...rest }) => {
     />
   );
 };
+
+export default PrivateRoute;
