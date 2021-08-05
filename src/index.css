@@ -1,5 +1,11 @@
 @tailwind base;
 @layer base {
+  html,
+  body,
+  #root {
+    @apply h-full w-full;
+  }
+
   h1 {
     @apply text-2xl;
   }
@@ -11,6 +17,15 @@
   }
   a {
     @apply text-blue-600 underline;
+  }
+  button {
+    @apply shadow-md rounded-md px-5 py-2 bg-gray-300 font-medium hover:bg-gray-200 transition-colors duration-200;
+  }
+  button.success {
+    @apply bg-green-500 text-white hover:bg-green-400;
+  }
+  button.danger {
+    @apply bg-red-500 text-white hover:bg-red-400;
   }
 }
 @tailwind components;
