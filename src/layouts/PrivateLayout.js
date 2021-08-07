@@ -3,7 +3,7 @@ function PrivateLayout({ children }) {
     <>
       <nav>Navbar</nav>
       <aside>Sidebar</aside>
-      <div class='main'>{children}</div>
+      <div className='main'>{children}</div>
     </>
   );
 }

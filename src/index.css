@@ -27,6 +27,9 @@
   button.danger {
     @apply bg-red-500 text-white hover:bg-red-400;
   }
+  .test-border {
+    @apply border-black border-dashed box-border border-2;
+  }
 }
 @tailwind components;
 @tailwind utilities;

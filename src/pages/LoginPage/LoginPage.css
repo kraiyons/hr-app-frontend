@@ -1,3 +1,11 @@
+.page-wrapper {
+  @apply w-full h-full flex flex-col justify-center items-center;
+}
+
+.form-wrapper {
+  @apply mt-5 p-5 rounded-md shadow-xl bg-green-400 md:w-1/5 w-4/5;
+}
+
 .form-input-group {
   @apply flex flex-col py-2;
 }
