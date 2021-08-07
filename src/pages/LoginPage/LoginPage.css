@@ -1,9 +1,9 @@
 .form-input-group {
-  @apply flex flex-col;
+  @apply flex flex-col py-2;
 }
 
 .form-input-group__label {
-  @apply font-thin;
+  @apply font-bold text-white py-2;
 }
 
 .form-input-group__input {

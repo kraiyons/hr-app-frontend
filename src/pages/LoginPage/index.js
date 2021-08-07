@@ -5,32 +5,37 @@ const Login = () => {
     e.preventDefault();
   };
   return (
-    <div class='w-full h-full flex justify-center items-center'>
-      <form onSubmit={_handleSubmit}>
-        <div class='form-input-group'>
-          <label class='form-input-group__label' htmlFor='username'>
+    <div className='w-full h-full flex flex-col justify-center items-center'>
+      <h1 className='font-bold'>Login to the HR App</h1>
+      <form
+        onSubmit={_handleSubmit}
+        className='mt-5 p-5 rounded-md shadow-xl bg-green-400'>
+        <div className='form-input-group'>
+          <label className='form-input-group__label' htmlFor='username'>
             Username
           </label>
           <input
-            class='form-input-group__input'
+            className='form-input-group__input'
             type='text'
             name='username'
             id='username'
           />
         </div>
-        <div class='form-input-group'>
-          <label class='form-input-group__label' htmlFor='password'>
+        <div className='form-input-group'>
+          <label className='form-input-group__label' htmlFor='password'>
             Password
           </label>
           <input
-            class='form-input-group__input'
+            className='form-input-group__input'
             type='password'
             name='password'
             id='password'
           />
         </div>
-        <div class='form-footer'>
-          <button type='submit'>Login</button>
+        <div className='form-footer'>
+          <button type='submit' className='w-full'>
+            Login
+          </button>
         </div>
       </form>
     </div>
