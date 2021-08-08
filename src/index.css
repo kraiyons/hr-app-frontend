@@ -27,6 +27,9 @@
   button.danger {
     @apply bg-red-500 text-white hover:bg-red-400;
   }
+  button.warning {
+    @apply hover:text-black text-white active:bg-yellow-300 bg-yellow-400;
+  }
   .test-border {
     @apply border-black border-dashed box-border border-2;
   }

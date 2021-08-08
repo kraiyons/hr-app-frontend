@@ -10,7 +10,7 @@ import LoginPage from './pages/LoginPage/index';
 export default function App() {
   return (
     <Router>
-      <div className='w-full h-full border-black border-2'>
+      <div className='w-full h-full'>
         <Switch>
           <PublicRoute exact path='/login'>
             <LoginPage />
