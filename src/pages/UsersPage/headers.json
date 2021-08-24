@@ -1,0 +1,10 @@
+{
+  "inactive": "Status",
+  "email": "Email",
+  "firstName": "First Name",
+  "lastName": "Last Name",
+  "dateOfBirth": "DOB",
+  "country": "Country",
+  "jobTitle": "Title",
+  "dateJoined": "Join Date"
+}

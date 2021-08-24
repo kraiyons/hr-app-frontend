@@ -1,0 +1,30 @@
+{
+  "data": [
+    {
+      "_id": { "$oid": "611d0755a5121637e8f1e9d8" },
+      "inactive": true,
+      "email": "krai.alapide@gmail.com",
+      "password": "$2a$10$DyzV6Iaf7nGyR2ii6r.GCOuEo/6Iq1dvMYONMsIhifZgw4W2ami1.",
+      "firstName": "Krai",
+      "lastName": "Alapide",
+      "dateOfBirth": 631152000000,
+      "country": "Philippines",
+      "jobTitle": "Developer",
+      "dateJoined": 1628380800000,
+      "__v": { "$numberInt": "0" }
+    },
+    {
+      "_id": { "$oid": "611fae467c8da13b34156824" },
+      "inactive": true,
+      "email": "krai.alapide2@gmail.com",
+      "password": "$2a$10$bTjL534Xz/6zvFNFIVgNj.5CbtTC50k4aEtA5MR6fNTF4NKOZCsQC",
+      "firstName": "Krai",
+      "lastName": "Alapide",
+      "dateOfBirth": 631152000000,
+      "country": "Philippines",
+      "jobTitle": "Developer",
+      "dateJoined": 1628380800000,
+      "__v": { "$numberInt": "0" }
+    }
+  ]
+}

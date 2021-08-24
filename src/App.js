@@ -5,6 +5,7 @@ import PublicRoute from './routes/PublicRoute';
 
 import HomePage from './pages/HomePage/index';
 import LeavesPage from './pages/LeavesPage';
+import UsersPage from './pages/UsersPage';
 import LoginPage from './pages/LoginPage/index';
 
 export default function App() {
@@ -17,6 +18,9 @@ export default function App() {
           </PublicRoute>
           <PrivateRoute exact path='/leaves'>
             <LeavesPage />
+          </PrivateRoute>
+          <PrivateRoute exact path='/users'>
+            <UsersPage />
           </PrivateRoute>
           <PublicRoute exact path='/'>
             <HomePage />
