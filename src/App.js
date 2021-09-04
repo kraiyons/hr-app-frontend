@@ -19,9 +19,7 @@ export default function App() {
           <PrivateRoute exact path='/leaves'>
             <LeavesPage />
           </PrivateRoute>
-          <PrivateRoute exact path='/users'>
-            <UsersPage />
-          </PrivateRoute>
+          <PrivateRoute exact path='/users' component={UsersPage} />
           <PublicRoute exact path='/'>
             <HomePage />
           </PublicRoute>

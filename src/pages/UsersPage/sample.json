@@ -2,7 +2,7 @@
   "data": [
     {
       "_id": { "$oid": "611d0755a5121637e8f1e9d8" },
-      "inactive": true,
+      "inactive": false,
       "email": "krai.alapide@gmail.com",
       "password": "$2a$10$DyzV6Iaf7nGyR2ii6r.GCOuEo/6Iq1dvMYONMsIhifZgw4W2ami1.",
       "firstName": "Krai",
